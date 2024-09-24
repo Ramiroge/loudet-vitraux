@@ -1,0 +1,148 @@
+/* Header y generales */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header .logo img {
+    width: 100px; /* Ajusta el tamaño del logo aquí */
+}
+
+header .logo h1 {
+    font-size: 28px; /* Aumentar tamaño del h1 */
+    margin-left: 20px; /* Espacio entre logo y texto */
+}
+
+header .logo h2 {
+    font-size: 18px; /* Tamaño del h2 */
+    margin-left: 20px; /* Alineado con el h1 */
+}
+
+header .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer .social a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
+
+/* Carousel Section */
+#inicio {
+    position: relative;
+    text-align: center;
+    margin-top: 150px; /* Espacio para el header fijo */
+}
+
+.mainIndex {
+    display: flex; /* Usar flexbox para alinear carrusel y texto */
+    flex-direction: column;
+    margin: 0px 180px 200px; /* Espaciado lateral */
+    align-items: center;
+}
+
+.carousel {
+    width: 1000px; /* Aumentar el ancho del carrusel al 60% */
+}
+
+.carousel .carousel-caption {
+    left: 0px;
+    width: 100%;
+    text-shadow: black 1px -2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.carousel-text {
+    width: 1000px;
+    margin-top: 30px; /* Espaciado interno */
+    font-size: 1.7rem; /* Tamaño de letra del texto */
+    text-align: justify; /* Alinear el texto a la izquierda */
+}
+
+/* El Vitraux Section */
+#el-vitraux {
+    background-color: #f9f9f9; /* Fondo sutil */
+    padding: 60px 0; /* Espaciado vertical */
+}
+
+#el-vitraux .container {
+    max-width: 1000px; /* Ancho máximo para la sección */
+    margin: 0 auto; /* Centrar la sección */
+}
+
+#el-vitraux .row {
+    margin-bottom: 40px; /* Espacio entre filas */
+    align-items: center;
+}
+
+#el-vitraux img {
+    width: 100%; /* Hacer que la imagen ocupe todo el ancho de su contenedor */
+    max-width: 540px; /* Ancho máximo para mantener el tamaño uniforme */
+    height: auto; /* Mantener la relación de aspecto */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+#el-vitraux p {
+    font-size: 20px; /* Aumentar el tamaño de letra */
+    line-height: 1.8; /* Mejora la legibilidad */
+    margin: 10px 0; /* Añadir márgenes */
+    color: #333; /* Color del texto */
+}
+
+
+/* Sección activa en el header */
+nav ul li a.active {
+    font-weight: bold;
+}
