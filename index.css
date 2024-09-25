@@ -17,10 +17,7 @@ header .logo {
     align-items: center;
 }
 
-.container {
-    width: 1000px;
-    margin: 0 auto;
-}
+
 
 header .logo img {
     width: 100px; /* Ajusta el tamaño del logo aquí */
@@ -77,6 +74,19 @@ footer .social a:hover {
     text-decoration: underline;
 }
 
+/* body */
+body {
+    background-image: url('./images/fondoVitraux.jpg');
+    
+}
+
+.seccion {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
 /* Carousel Section */
 #inicio {
     position: relative;
@@ -87,12 +97,12 @@ footer .social a:hover {
 .mainIndex {
     display: flex; /* Usar flexbox para alinear carrusel y texto */
     flex-direction: column;
-    margin: 0px 180px 200px; /* Espaciado lateral */
+    margin-bottom: 200px; /* Espaciado lateral */
     align-items: center;
 }
 
 .carousel {
-    width: 1000px; /* Aumentar el ancho del carrusel al 60% */
+    width: 100%; /* Aumentar el ancho del carrusel al 60% */
 }
 
 .carousel .carousel-caption {
@@ -104,7 +114,7 @@ footer .social a:hover {
 }
 
 .carousel-text {
-    width: 1000px;
+    width: 100%;
     margin-top: 30px; /* Espaciado interno */
     font-size: 1.7rem; /* Tamaño de letra del texto */
     text-align: justify; /* Alinear el texto a la izquierda */
@@ -119,12 +129,6 @@ footer .social a:hover {
 #el-vitraux h2 {
     text-align: center;
     margin-bottom: 20px;
-}
-
-#el-vitraux .container {
-    background-color: #f9f9f9; /* Fondo sutil */
-    max-width: 1000px; /* Ancho máximo para la sección */
-    margin: 0 auto; /* Centrar la sección */
 }
 
 #el-vitraux .row {
@@ -265,7 +269,6 @@ footer .social a:hover {
 
 #trabajos, #contacto {
     padding: 20px;
-    background-color: #f9f9f9;
     margin-top: 20px;
     border-radius: 8px;
 }
