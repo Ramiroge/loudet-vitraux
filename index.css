@@ -1,4 +1,4 @@
-/* Header y generales */
+/* Header */
 header {
     display: flex;
     justify-content: space-between;
@@ -17,20 +17,19 @@ header .logo {
     align-items: center;
 }
 
-
-
 header .logo img {
-    width: 100px; /* Ajusta el tamaño del logo aquí */
+    width: 100px;
 }
 
 header .logo h1 {
-    font-size: 28px; /* Aumentar tamaño del h1 */
-    margin-left: 20px; /* Espacio entre logo y texto */
+    font-size: 28px; 
+    margin-left: 20px;
 }
 
 header .logo h2 {
-    font-size: 18px; /* Tamaño del h2 */
-    margin-left: 20px; /* Alineado con el h1 */
+    font-size: 18px; 
+    margin-left: 20px; 
+    margin-bottom: 0;
 }
 
 header .text-container {
@@ -80,11 +79,18 @@ body {
     
 }
 
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
 .seccion {
     width: 1000px;
     margin: 0 auto;
     padding: 30px;
     background-color: #f9f9f9;
+    border-radius: 18px;
+    margin-bottom: 200px;
 }
 
 /* Carousel Section */
@@ -92,103 +98,78 @@ body {
     position: relative;
     text-align: center;
     margin-top: 150px; /* Espacio para el header fijo */
-}
-
-.mainIndex {
-    display: flex; /* Usar flexbox para alinear carrusel y texto */
+    display: flex; 
     flex-direction: column;
-    margin-bottom: 200px; /* Espaciado lateral */
     align-items: center;
 }
-
-.carousel {
-    width: 100%; /* Aumentar el ancho del carrusel al 60% */
+#inicio button {
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+#inicio button:hover {
+    background-color: rgba(224, 224, 224, 0.4);
+}
 .carousel .carousel-caption {
     left: 0px;
     width: 100%;
     text-shadow: black 1px -2px;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    padding: 15px;
 }
 
 .carousel-text {
-    width: 100%;
-    margin-top: 30px; /* Espaciado interno */
-    font-size: 1.7rem; /* Tamaño de letra del texto */
+    margin-top: 30px;
+    font-size: 1.7rem; 
     text-align: justify; /* Alinear el texto a la izquierda */
 }
 
 /* El Vitraux Section */
-#el-vitraux {
-    
-    margin-bottom: 200px; /* Espaciado vertical */
-}
-
-#el-vitraux h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
 #el-vitraux .row {
-    margin-bottom: 40px; /* Espacio entre filas */
+    margin-bottom: 50px; 
     align-items: center;
 }
 
 #el-vitraux img {
-    width: 100%; /* Hacer que la imagen ocupe todo el ancho de su contenedor */
-    max-width: 540px; /* Ancho máximo para mantener el tamaño uniforme */
-    height: auto; /* Mantener la relación de aspecto */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 100%; 
+    max-width: 540px; 
+    height: auto;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 #el-vitraux p {
-    font-size: 20px; /* Aumentar el tamaño de letra */
-    line-height: 1.8; /* Mejora la legibilidad */
-    margin: 10px 0; /* Añadir márgenes */
-    color: #333; /* Color del texto */
+    font-size: 20px; 
+    line-height: 1.8; 
+    margin: 10px 0; 
+    color: #333; 
 }
 
-#galeria {
-    margin-bottom: 200px;
-}
-
-#galeria h2 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#galeria .row {
-    margin-bottom: 30px; /* Espacio entre filas */
-}
-
+/* galeria section */
 #galeria img {
-    width: 100%; /* Hacer que la imagen ocupe todo el ancho de su contenedor */
-    height: auto; /* Mantener la relación de aspecto */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    transition: transform 0.3s ease; /* Transición suave para el efecto */
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
 }
 
 #galeria img:hover {
-    transform: scale(1.05); /* Aumentar el tamaño de la imagen al pasar el mouse */
+    transform: scale(1.05);
 }
 
 #galeria p {
-    text-align: center; /* Centrar el texto */
-    font-size: 18px; /* Tamaño de letra */
-    margin-top: 10px; /* Espacio entre la imagen y el texto */
+    text-align: center; 
+    font-size: 18px; 
+    margin-top: 10px;
 }
 
+/* usos section */
 #usos {
-    text-align: center; /* Centra el texto de los títulos y párrafos */
-}
-
-#usos h2 {
-    margin: 50px 0;
-    font-size: 2.5rem;
+    text-align: center;
 }
 
 #usos p {
@@ -202,20 +183,20 @@ body {
 }
 
 .fotosUsos {
-    overflow: hidden; /* Oculta las imágenes que están fuera de la vista */
+    overflow: hidden;
     padding: 50px 0;
     white-space: nowrap;
     position: relative;
 }
 
 .usos-slide {
-    display: inline-block; /* Permite que los slides estén en línea */
+    display: inline-block;
     animation: slideAnimation 40s infinite linear; /* Aumenta el tiempo de la animación */
 }
 
 .usos-slide img {
-    height: 300px; /* Ajusta la altura de las imágenes */
-    width: auto; /* Mantiene la proporción */
+    height: 300px;
+    width: auto;
 }
 
 @keyframes slideAnimation {
@@ -229,14 +210,7 @@ body {
 
 /* Servicios Section */
 #services {
-    background-color: #fff; /* Fondo blanco */
-    padding: 50px 0; /* Espaciado vertical */
-    text-align: center; /* Centrar texto */
-}
-
-#services h2 {
-    font-size: 2rem; /* Tamaño del título */
-    margin-bottom: 30px; /* Espacio debajo del título */
+    text-align: center;
 }
 
 .service-card {
@@ -267,17 +241,6 @@ body {
     color: #555; /* Color del texto */
 }
 
-#trabajos, #contacto {
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 8px;
-}
-
-#trabajos h2, #contacto h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-}
-
 #trabajos ul {
     list-style-type: none;
     padding: 0;
@@ -303,7 +266,7 @@ input, textarea {
     border-radius: 4px;
 }
 
-button {
+#contacto button {
     padding: 10px;
     background-color: #4CAF50;
     color: white;
@@ -312,8 +275,29 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#contacto button:hover {
     background-color: #45a049;
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+
+.social-links img {
+    width: 150px;
+    height: 150px;
+    border-radius: 18px;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.1);
 }
 
 
