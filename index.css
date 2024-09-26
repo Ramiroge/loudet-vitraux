@@ -1,10 +1,15 @@
+:root {
+    --color-principal: #333;
+    --color-secundario: white;
+}
+
 /* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: var(--color-principal);
     color: white;
     position: fixed;
     top: 0;
@@ -57,10 +62,16 @@ nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: var(--color-principal);
     color: white;
     text-align: center;
     padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+footer p{
+    font-size: 1rem;
 }
 
 footer .social a {
@@ -76,21 +87,44 @@ footer .social a:hover {
 /* body */
 body {
     background-image: url('./images/fondoVitraux.jpg');
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Asegúrate de que el body tenga position relative */
     
 }
 
+body::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Cambia la opacidad aquí */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Generales */
 h2 {
     text-align: center;
     margin-bottom: 40px;
+}
+
+p {
+    font-size: 1.7rem;
 }
 
 .seccion {
     width: 1000px;
     margin: 0 auto;
     padding: 30px;
-    background-color: #f9f9f9;
-    border-radius: 18px;
+    background-color: var(--color-secundario);
     margin-bottom: 200px;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.7);
 }
 
 /* Carousel Section */
@@ -102,11 +136,9 @@ h2 {
     flex-direction: column;
     align-items: center;
 }
+
 #inicio button {
-    padding: 10px;
     color: white;
-    border: none;
-    border-radius: 4px;
     cursor: pointer;
 }
 
@@ -122,9 +154,8 @@ h2 {
 }
 
 .carousel-text {
-    margin-top: 30px;
-    font-size: 1.7rem; 
-    text-align: justify; /* Alinear el texto a la izquierda */
+    margin-top: 30px; 
+    text-align: justify;
 }
 
 /* El Vitraux Section */
@@ -138,14 +169,15 @@ h2 {
     max-width: 540px; 
     height: auto;
     border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
 }
 
 #el-vitraux p {
-    font-size: 20px; 
-    line-height: 1.8; 
-    margin: 10px 0; 
-    color: #333; 
+    margin: 10px 0;  
+}
+
+#el-vitraux .textoIzq {
+    text-align: right;
 }
 
 /* galeria section */
@@ -163,7 +195,6 @@ h2 {
 
 #galeria p {
     text-align: center; 
-    font-size: 18px; 
     margin-top: 10px;
 }
 
@@ -177,9 +208,6 @@ h2 {
     margin: 0 auto;
     max-width: 1200px;
     padding: 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
 }
 
 .fotosUsos {
